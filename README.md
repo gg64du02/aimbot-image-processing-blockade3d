@@ -48,16 +48,16 @@ Tips:
 
 -N will stop the script.
 
--TAB will show you the scoreboard ingame and let's you use you mouse.
+-TAB will show you the scoreboard in game and let's you use you mouse.
 
 -Don't make it run for too long if you don't have much memory:
-the script will collect stastitics about how fast the script is running and
+the script will collect statistics about how fast the script is running and
 show you the results at the end (everything is local, nothing on the internet)
 
 -inside the script main*.py is a variable named: intSubdiv, this is attended to
 speed up the processing by about a factor of intSubdiv^2 (intSubdiv*intSubdiv).
-Best values I found so far are between 18-24 pixels. (allow for /324 to /576 
-execution time per loop)
+Best values I found so far are between 18-24 pixels. (approximatly dividing the 
+execution time by 324 to 576 per loop)
 
 
 ## How to work on it:
@@ -81,7 +81,7 @@ Please read ideas inside the TODO.md
 
 ## Credits:
 
-Thanks to Daniel (for the keys.py librairy and contructive critizism): 
+Thanks to Daniel (for the keys.py library and the constructive criticism): 
 
 https://github.com/daniel-kukiela
 
