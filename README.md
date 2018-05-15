@@ -47,17 +47,6 @@ speed up the processing by about a factor of intSubdiv^2 (intSubdiv*intSubdiv).
 Best values I found so far are between 18-24 pixels. (allow for /324 to /576 
 execution time per loop)
 
-## Credits:
-
-Thanks to Daniel (for the keys.py librairy and contructive critizism): 
-https://github.com/daniel-kukiela
-https://twitter.com/daniel_kukiela
-
-
-And for Sentdex (for little bit of code (Region Of interest) and for inspiring me in the first place):
-https://github.com/Sentdex
-https://www.youtube.com/user/sentdex
-
 
 ## How to work on it:
 
@@ -76,3 +65,19 @@ I have Blockade 3D installed on Steam. You will an easier steam if have a profil
  m700 or the crossbow.
 
 Please read ideas inside the TODO.md
+
+
+## Credits:
+
+Thanks to Daniel (for the keys.py librairy and contructive critizism): 
+
+https://github.com/daniel-kukiela
+
+https://twitter.com/daniel_kukiela
+
+
+And for Sentdex (for little bit of code (Region Of interest) and for inspiring me in the first place):
+
+https://github.com/Sentdex
+
+https://www.youtube.com/user/sentdex
