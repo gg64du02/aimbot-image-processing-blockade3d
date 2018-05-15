@@ -13,6 +13,18 @@ I learnt a little bit of python through this project. And wanted to explore what
 static rules coding when it comes to image processing. Another project might follow using a
 Machine Learning technology.
 
+## What does it look like:
+
+Actually it is more difficult to play with it than without it.
+
+Don't hesitate to take a peek at each video as I was progressing in the development.
+
+https://www.youtube.com/watch?v=0JrUKxCvSsE&list=PL4ftK5Ce2m_ZT_fHOl6UeiZ9gOrT6PlHu
+
+My first attempt was (hilarious):
+
+https://www.youtube.com/watch?v=PNkFDKUuN-g
+
 ## How to use it:
 
 1.get the game in the 1024*768 resolution in window mode
