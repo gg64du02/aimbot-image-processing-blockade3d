@@ -5,7 +5,7 @@
 A script to aimbot at anyone and shoot anyone in Blockade 3D.
 
 It is a script to process on the rendered image of the game while it is in window mode 1024*768,
-it will shoot at anything that looks like remotely like an head.
+it will shoot at anything that looks remotely like a head.
 
 ## Why:
 
