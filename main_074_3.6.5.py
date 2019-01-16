@@ -98,6 +98,17 @@ def roi_color(img, vertices):
     return masked
 
 
+# fillConvexPoly
+
+def roi_fillConvexPoly(img, vertices):
+    #blank mask:
+    mask = np.zeros_like(img)
+    #filling pixels inside the polygon defined by "vertices" with the fill color
+    cv2.fillConvexPoly(mask, vertices, 255)
+    masked = np.bitwise_and(img, mask)
+    return masked
+
+
 def multiproc_target_finding(x):
     # todo
     # time.sleep(1)
@@ -155,13 +166,21 @@ while (stopScript == False):
     screen = grab_screen(region=(0,40,WIDTH,HEIGTH+40))
 
     #masking the UI
-    vertices = np.array([[200,700],[200,600],[10,600],[10,168],[970,168],[970,700]], np.int32)
+    # vertices = np.array([[200,700],[200,600],[10,600],[10,168],[970,168],[970,700]], np.int32)
+    # vertices = np.array([[200,700],[200,600],[10,600],[10,168],[970,168],[970,700]], np.int32)
+    # vertices = np.array([ [10, 168],[10, 700], [970, 168], [970, 700]], np.int32)#LOL
+    vertices = np.array([[10, 168], [10, 700],  [970, 700],[970, 168]], np.int32)  # faster ?
+
+	#10 970 first
+    #168 700 second
+
 
     roi_st_time = time.time()
 
     if(boolDisableMask == 0):
-        screen = roi(screen, [vertices])
+        # screen = roi(screen, [vertices])
         # screen = roi_color(screen, [vertices])
+        screen = roi_fillConvexPoly(screen, vertices)
 
     roi_ed_time = time.time()
 
@@ -174,7 +193,8 @@ while (stopScript == False):
     ret,whiteChannel = cv2.threshold(screenGray,28,255,cv2.THRESH_BINARY)
 
     notADamnThing = ""
-    iix = 0
+    # iix = 0
+    iix = 168
     iiy = 0
     once = 0
 
@@ -247,8 +267,18 @@ while (stopScript == False):
     # cv2.imshow('tmpScreen',tmpScreen)
     # cv2.imshow('simpleMat',simpleMat)
 
+
+    # cv2.imshow('window2',cv2.cvtColor(screen, cv2.COLOR_BGR2RGB))
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+
+    # https: // docs.opencv.org / 3.0 - beta / modules / imgproc / doc / drawing_functions.html?highlight = fillpoly  # fillconvexpoly
+
+
     #cv2.imshow('window',cv2.cvtColor(screen, cv2.COLOR_BGR2RGB))
     if(keyboard.is_pressed('n')):
+
+
         stopScript = True
         cv2.destroyAllWindows()
 
